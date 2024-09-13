@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl - Restaurant Reservation System</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pearl Restaurants</h1>
+            <p>Experience Luxury Dining & Flavors</p>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Search for restaurants...">
+            <button onclick="searchRestaurants()">Search</button>
+        </div>
+
+        <!-- Display Search Results -->
+        <div id="restaurant-list">
+            <!-- Restaurant details will be injected here dynamically -->
+        </div>
+
+        <!-- Reservation Modal -->
+        <div id="reservation-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Reserve a Table at Pearl</h2>
+                <form id="reservation-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" required>
+
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" min="1" required>
+
+                    <button type="submit">Confirm Reservation</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Pearl Restaurant. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="./project.js"></script>
+</body>
+</html>
